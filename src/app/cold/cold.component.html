@@ -1,0 +1,30 @@
+<h3>Cold Observable Demo</h3>
+<button routerLink="/hot">To Hot Demo</button>
+<div>
+  <button (click)="startCold()">Start Cold Counter</button>
+  <button (click)="startHot()">Start Hot Counter</button>
+</div> 
+<div>
+  <p>Cold observables don't begin emitting values until you subscribe to them.
+     Each subscription gets all of the observable's data regardless of when
+     the subscription starts.
+     <br>
+     <br>
+     In both counters, the second subscription is started after 2.5 seconds. In
+     the cold counter, both subscriptions start at 1 and get all of the observable's
+     data from the beginning. In the hot counter, the second subscription simply
+     joins in to the feed that the first subscription is getting.
+     <br>
+     <br>
+     The common analogy for cold observables is a prerecorded video: it can be
+     watched by different people at different times, and they would each see the 
+     same thing. 
+  </p>
+</div>
+<div>
+  <h4>Cold Counter</h4>
+  <p></p>
+  <h4>Hot Counter</h4>
+  <p></p>
+</div>
+

@@ -1,0 +1,31 @@
+<h3>Hot Observable Demo: Keydown</h3>
+<button routerLink="/cold">To Cold Demo</button>
+<div>
+  <button (click)="subscribe()">Subscription 1</button>
+  <button (click)="addSubscription()">Subscription 2</button>
+  <button (click)="unsubscribe()">End Subscriptions</button>
+</div>
+<div>
+  <p>Hot observables are streams of events that occur whether or not one is 
+     subscribed to them or not. You can keydown before and after subscribing,
+     but nothing will happen because nothing is listening for the keydowns.
+     <br>
+     <br>
+     Hot observables can also have multiple subscriptions that start at
+     different points and only recieve data for the time that they are subscribed.
+     This is demonstrated if you begin the subscription, do some keydowns, then
+     add the second subscriptions and do more keydowns.
+     <br>
+     <br>
+     A common analogy for hot observables is a live performance: everyone watching
+     is seeing the same thing at the same exact time. If someone comes late, they 
+     only see the part they are there for.
+  </p>
+</div>
+<div>
+  <h4>Subscription 1</h4>
+  <p></p>
+  <br>
+  <h4>Subscription 2</h4>
+  <p></p>
+</div>
